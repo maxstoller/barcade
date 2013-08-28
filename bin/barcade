@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'barcade'
+
+Barcade::CLI.start(*ARGV)
