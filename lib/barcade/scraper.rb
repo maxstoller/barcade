@@ -6,8 +6,8 @@ module Barcade
 
 		attr_accessor :date_slug
 
-		def initialize(date_slug)
-			@date_slug = date_slug
+		def initialize(date)
+			@date_slug = date.strftime('%Y/%m/%d/')
 		end
 
 		def tap
