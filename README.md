@@ -1,29 +1,21 @@
 # Barcade
 
-TODO: Write a gem description
+A CLI for Barcade. Check Barcade's (Brooklyn) tap without leaving the comfy confines of the terminal.
+
+![](http://i.imgur.com/UnQVPBo.png)
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'barcade'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install barcade
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ barcade
+
+There exists a `--yesterday` flag.
+
+    $ barcade --yesterday
 
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Please feel free. I will buy you a beer.

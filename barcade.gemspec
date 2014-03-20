@@ -6,11 +6,11 @@ require 'barcade/version'
 Gem::Specification.new do |spec|
   spec.name          = "barcade"
   spec.version       = Barcade::VERSION
-  spec.authors       = ["maxstoller"]
+  spec.authors       = ["Max Stoller"]
   spec.email         = ["maxstoller@gmail.com"]
-  spec.description   = %q{}
-  spec.summary       = %q{}
-  spec.homepage      = ""
+  spec.description   = %q{A CLI for Barcade.}
+  spec.summary       = %q{A CLI for Barcade.}
+  spec.homepage      = "https://github.com/maxstoller/barcade"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
