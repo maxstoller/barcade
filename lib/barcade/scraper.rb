@@ -21,7 +21,7 @@ module Barcade
 			begin
 				post = agent.get("#{BASE_URI}#{self.date_slug}")
 			rescue Mechanize::ResponseCodeError => e
-				puts e.response_code
+				puts "Today's tap hasn't been posted yet. Try the --yesterday flag."
 			end
 		end
 	end
