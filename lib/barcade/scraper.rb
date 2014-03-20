@@ -6,7 +6,7 @@ module Barcade
 
 		attr_accessor :date_slug
 
-		def initialize(date_slug = Time.new.strftime('%Y/%m/%d/'))
+		def initialize(date_slug)
 			@date_slug = date_slug
 		end
 
@@ -20,7 +20,8 @@ module Barcade
 
 			begin
 				post = agent.get("#{BASE_URI}#{self.date_slug}")
-			rescue Exception => e
+			rescue Mechanize::ResponseCodeError => e
+				puts e.response_code
 			end
 		end
 	end

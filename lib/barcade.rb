@@ -7,13 +7,20 @@ require 'terminal-table'
 module Barcade
   class CLI
   	def self.start(*args)
-  		barcade_scraper = Barcade::Scraper.new('2013/08/27/')
+      date_slug = case args[0]
+      when '--yesterday'
+        Date.today.prev_day.strftime('%Y/%m/%d/')
+      else
+        Date.today.strftime('%Y/%m/%d/')
+      end
+
+  		barcade_scraper = Barcade::Scraper.new(date_slug)
   		beeradvocate_scraper = BeerAdvocate::Scraper.new
 
   		beers = barcade_scraper.tap.map do |beer_name|
   			beeradvocate_profile = beeradvocate_scraper.find_beer_by_name(beer_name)
   			[beer_name, beeradvocate_profile[:score]] unless beeradvocate_profile.nil?
-  		end.reject(&:nil?)
+  		end.compact
 
   		puts Terminal::Table.new rows: beers.sort
   	end
